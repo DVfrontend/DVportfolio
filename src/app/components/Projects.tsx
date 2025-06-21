@@ -22,7 +22,12 @@ const projects: Project[] = [
     title: "Snaplet",
     description:
       "Online store with a shopping cart, implemented on Redux Toolkit + Next.js",
-    tech: ["Next.js", "Redux Toolkit", "TypeScript", "Tailwind", "Framer Motion",
+    tech: [
+      "Next.js",
+      "Redux Toolkit",
+      "TypeScript",
+      "Tailwind",
+      "Framer Motion",
     ],
     github: "https://github.com/DVfrontend/snaplet-next.js",
   },
@@ -31,6 +36,13 @@ const projects: Project[] = [
     description: "Weather Forecast App with OpenWeather API",
     tech: ["React", "TypeScript", "Vite", "Tailwind"],
     github: "https://github.com/DVfrontend/forecast-vite",
+  },
+  {
+    title: "To-Do",
+    description:
+      "A modern, minimalist ToDo app built with React and TypeScript, featuring animations and local storage support.",
+    tech: ["React", "TypeScript", "Next.js", "Framer-Motion"],
+    github: "https://github.com/DVfrontend/to-do",
   },
 ];
 

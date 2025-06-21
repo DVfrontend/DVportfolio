@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaTelegramPlane, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null); // ✅ тип формы
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -15,20 +15,20 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_0agxd85", // ← сюда вставь свой service ID
+        "service_0agxd85",
         "template_na2s7en",
         formRef.current,
-        "qtiCTQqMPFmSm1Bv2",
+        "qtiCTQqMPFmSm1Bv2"
       )
       .then(
         () => {
-          alert("Excellent, message delivered")
-          formRef.current?.reset();
+          alert("Excellent, message delivered");
+          formRef.current?.reset(); // ✅ reset доступен у HTMLFormElement
         },
         (error) => {
           alert("Error");
           console.error(error);
-        },
+        }
       );
   };
 

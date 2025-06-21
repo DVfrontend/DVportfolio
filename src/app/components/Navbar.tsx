@@ -24,7 +24,7 @@ export const Navbar = () => {
           </li>
           <li>
             <Link
-              href="/Dani_Vartanov_CV.pdf"
+              href="/Daniel_Vartanov_CV.pdf"
               target="_blank"
               className="hover:text-gray-300 transition"
             >
