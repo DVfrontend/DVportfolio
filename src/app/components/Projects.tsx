@@ -41,7 +41,7 @@ const projects: Project[] = [
     title: "To-Do",
     description:
       "A modern, minimalist ToDo app built with React and TypeScript, featuring animations and local storage support.",
-    tech: ["React", "TypeScript", "Next.js", "Framer-Motion"],
+    tech: ["React", "TypeScript", "Next.js", "Framer Motion"],
     github: "https://github.com/DVfrontend/to-do",
   },
 ];
@@ -63,9 +63,10 @@ export default function Projects() {
           <motion.div
             key={index}
             className="bg-[#2a2a2a] rounded-2xl p-6 text-white shadow-md hover:shadow-lg transition"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
           >
             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
             <p className="text-gray-300 mb-4">{project.description}</p>

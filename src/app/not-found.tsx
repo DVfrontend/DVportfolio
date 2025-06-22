@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -46,5 +46,5 @@ export default function NotFound() {
         </Link>
       </motion.div>
     </div>
-  )
+  );
 }

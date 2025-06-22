@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="sm:mt-0 mt-12">
         <Hero />
         <Projects />
         <Contact />

@@ -18,7 +18,7 @@ export default function Contact() {
         "service_0agxd85",
         "template_na2s7en",
         formRef.current,
-        "qtiCTQqMPFmSm1Bv2"
+        "qtiCTQqMPFmSm1Bv2",
       )
       .then(
         () => {
@@ -28,7 +28,7 @@ export default function Contact() {
         (error) => {
           alert("Error");
           console.error(error);
-        }
+        },
       );
   };
 
