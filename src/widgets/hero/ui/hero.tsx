@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-[#1c1c1c] to-[#2c2c2c] px-4">
+    <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center px-4">
       <motion.img
         src="/DV.jpg"
         alt="Daniel's photo"
@@ -27,7 +27,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
-        className="mt-6 text-lg sm:text-xl text-gray-300 max-w-2xl"
+        className="mt-6 text-lg sm:text-xl  max-w-2xl"
       >
         I am a Frontend Developer focused on building fast, adaptive, and modern
         user interfaces with React, TypeScript, and Tailwind CSS. I prioritize
@@ -54,40 +54,6 @@ export default function Hero() {
         >
           Download Resume
         </a>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6 }}
-        className="mt-16 text-center"
-      >
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-          My Development Stack
-        </h2>
-
-        <div className="flex flex-wrap justify-center gap-3">
-          {[
-            "React",
-            "TypeScript",
-            "Next.js",
-            "Tailwind CSS",
-            "Framer Motion",
-            "REST API",
-            "Vite",
-          ].map((tech, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white/10 px-4 py-2 rounded-full backdrop-blur-sm border border-white/10 text-white text-sm sm:text-base"
-            >
-              {tech}
-            </motion.span>
-          ))}
-        </div>
       </motion.div>
     </section>
   );

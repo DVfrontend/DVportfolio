@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Светлая тема - базовые стили */
 body {
-  background-color: #1c1c1c;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Тёмная тема */
+body.dark {
+  background-color: #121212;
+  color: white;
 }

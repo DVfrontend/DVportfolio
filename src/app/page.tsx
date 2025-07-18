@@ -1,8 +1,5 @@
-import { Navbar } from "./components/Navbar";
-import Hero from "./components/Hero";
-import Contact from "./components/Contact";
-import Projects from "./components/Projects";
-import { Footer } from "./components/Footer";
+import { Navbar, Footer } from '@/shared/ui'
+import { Hero, About, Projects, Contact } from '@/widgets'
 
 export default function HomePage() {
   return (
@@ -10,10 +7,11 @@ export default function HomePage() {
       <Navbar />
       <main className="sm:mt-0 mt-12">
         <Hero />
+        <About />
         <Projects />
         <Contact />
       </main>
       <Footer />
     </>
-  );
+  )
 }
