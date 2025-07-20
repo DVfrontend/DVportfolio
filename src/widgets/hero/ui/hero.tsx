@@ -4,21 +4,24 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <section
+      id="hero"
+      className="min-h-screen flex flex-col justify-center items-center text-center px-4"
+    >
       <motion.img
         src="/DV.jpg"
         alt="Daniel's photo"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-white mb-6 shadow-lg"
+        className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 mb-6 shadow-lg"
       />
 
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl sm:text-5xl md:text-6xl font-bold text-white"
+        className="text-4xl sm:text-5xl md:text-6xl font-bold"
       >
         Hi, I&apos;m Daniel
       </motion.h1>
@@ -27,7 +30,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6 }}
-        className="mt-6 text-lg sm:text-xl  max-w-2xl"
+        className="mt-6 text-lg sm:text-xl max-w-2xl"
       >
         I am a Frontend Developer focused on building fast, adaptive, and modern
         user interfaces with React, TypeScript, and Tailwind CSS. I prioritize
@@ -50,7 +53,7 @@ export default function Hero() {
         <a
           href="/resume.zip"
           download
-          className="px-6 py-3 rounded-2xl border border-white text-white font-medium hover:bg-white hover:text-black transition"
+          className="px-6 py-3 rounded-2xl border font-medium hover:bg-white hover:text-black transition"
         >
           Download Resume
         </a>
