@@ -2,13 +2,21 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const [stack, setStack] = useState<{ name: string; icon: string }[]>([]);
+
+  useEffect(() => {
+    fetch("/data/stack.json")
+      .then((res) => res.json())
+      .then((data) => setStack(data))
+      .catch((err) => console.error("Failed to load stack.json", err));
+  }, []);
+
   return (
-    <section
-      id="about"
-      className="py-20 px-4 scroll-mt-20"
-    >
+    <section id="about" className="py-20 px-4 scroll-mt-20">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h2
           className="text-4xl sm:text-5xl font-bold mb-6"
@@ -26,9 +34,7 @@ export default function About() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           I’m a dedicated Frontend Developer focused on building clean,
-          responsive, and highly performant user interfaces. With deep knowledge
-          of modern technologies and frameworks, I turn complex ideas into
-          elegant, functional solutions.
+          responsive, and highly performant user interfaces...
         </motion.p>
 
         <motion.div
@@ -42,31 +48,25 @@ export default function About() {
             My Development Stack
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              "HTML&CSS",
-              "SCSS",
-              "JavaScript",
-              "React",
-              "TypeScript",
-              "Next.js",
-              "Tailwind CSS",
-              "Framer Motion",
-              "REST API",
-              "Vite",
-              "Zustand",
-              "TanStack Query",
-            ].map((tech, index) => (
-              <motion.span
-                key={index}
+          <div className="flex flex-wrap justify-center gap-6">
+            {stack.map(({ name, icon }, index) => (
+              <motion.div
+                key={name}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="px-4 py-2 rounded-full backdrop-blur-sm border text-sm sm:text-base"
+                className="flex flex-col items-center gap-2"
               >
-                {tech}
-              </motion.span>
+                <Image
+                  src={icon}
+                  alt={name}
+                  className="w-10 h-10"
+                  width={40}
+                  height={40}
+                />
+                <span className="text-sm sm:text-base">{name}</span>
+              </motion.div>
             ))}
           </div>
         </motion.div>

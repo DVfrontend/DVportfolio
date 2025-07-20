@@ -1,0 +1,14 @@
+[
+  { "name": "HTML", "icon": "/logos/html/html.svg" },
+  { "name": "CSS", "icon": "/logos/css/css.svg" },
+  { "name": "SCSS", "icon": "/logos/scss/scss.svg" },
+  { "name": "JavaScript", "icon": "/logos/js/js.svg" },
+  { "name": "TypeScript", "icon": "/logos/ts/ts.svg" },
+  { "name": "React", "icon": "/logos/react/react.svg" },
+  { "name": "Next.js", "icon": "/logos/next/next.svg" },
+  { "name": "Git", "icon": "/logos/git/git.svg" },
+  { "name": "GitHub", "icon": "/logos/github/github.svg" },
+  { "name": "Tailwind CSS", "icon": "/logos/tailwind/tailwind.svg" },
+  { "name": "Figma", "icon": "/logos/figma/figma.svg" },
+  { "name": "Zustand", "icon": "/logos/zustand/zustand.svg" }
+]
